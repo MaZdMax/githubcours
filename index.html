@@ -1,95 +1,220 @@
-<!DOCTYPE html>
+
+<!-- index.html -->
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Studio</title>
-    <!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="style.css" >
-    
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NomDeMarque — Experience digitale incroyable</title>
+  <meta name="description" content="Une page d'accueil moderne, performante et accessible — design élégant, CTA clair, sections équipe, services et témoignages." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="logo">CreativeStudio</div>
-        <nav>
-            <ul>
-                <li>#homeAccueil</a></li>
-                <li>#servicesServices</a></li>
-                <li>#galleryGalerie</a></li>
-                <li><a href="#testimonials">Avis               <li>#contactContact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- simple SVG logo -->
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+          <rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="url(#g)"/>
+          <path d="M7 12h10M7 8h6M7 16h10" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-text">NomDeMarque</span>
+      </a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Réalisations</a></li>
+          <li><a href="#team">Équipe</a></li>
+          <li><a href="#contact" class="btn-outline">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
         <div class="hero-content">
-            <h1>Votre Inspiration, Notre Création</h1>
-            <p>Nous transformons vos idées en designs uniques et mémorables.</p>
-            #servicesDécouvrir nos services</a>
+          <h1 class="title">Créez des expériences numériques <span class="accent">qui marquent</span></h1>
+          <p class="lead">Designs responsables, performance réelle et stratégie orientée conversion. Nous transformons les idées en produits digitaux remarquables.</p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#contact">Commencer le projet</a>
+            <a class="btn-ghost" href="#work">Voir nos réalisations</a>
+          </div>
+
+          <ul class="badges" aria-hidden="true">
+            <li>⚡ Performance</li>
+            <li>♻️ Durable</li>
+            <li>🔒 Sécurisé</li>
+          </ul>
         </div>
+
+        <figure class="hero-visual" aria-hidden="true">
+          <!-- stylized mockup -->
+          <div class="mockup">
+            <svg viewBox="0 0 800 520" class="mockup-screen" role="img" aria-hidden="true">
+              <rect x="8" y="8" width="784" height="504" rx="18" fill="#0f172a"/>
+              <rect x="48" y="48" width="704" height="384" rx="10" fill="#0ea5a7"/>
+              <g transform="translate(64,70)">
+                <rect width="640" height="24" rx="4" fill="#ffffff88"/>
+                <rect y="48" width="520" height="18" rx="4" fill="#ffffffbb"/>
+                <rect y="84" width="420" height="18" rx="4" fill="#ffffffbb"/>
+                <rect y="120" width="300" height="18" rx="4" fill="#ffffffbb"/>
+              </g>
+            </svg>
+          </div>
+        </figure>
+      </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="services">
-        <h2>Nos Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Design Graphique</h3>
-                <p>Création de visuels impactants pour votre marque.</p>
-            </div>
-            <div class="service-card">
-                <h3>UI/UX</h3>
-                <p>Des interfaces modernes et intuitives pour vos projets.</p>
-            </div>
-            <div class="service-card">
-                <h3>Branding</h3>
-                <p>Identité visuelle forte pour vous démarquer.</p>
-            </div>
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Nos services</h2>
+          <p class="muted">Stratégie, design et exécution — tout pour accélérer votre croissance digitale.</p>
         </div>
+
+        <div class="cards-grid" role="list">
+          <article class="card" role="listitem">
+            <svg class="card-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Design produit</h3>
+            <p>UI/UX raffinés — prototypes testés et validés par les utilisateurs.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <svg class="card-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Développement</h3>
+            <p>Sites rapides, accessibles et maintenables — stack moderne et CI/CD.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <svg class="card-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Stratégie & growth</h3>
+            <p>Roadmaps produits, SEO technique et acquisition durable.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="gallery">
-        <h2>Notre Galerie</h2>
-        <div class="grid">
-            <imgs://source.unsplash.com/random/400x400?art
-            https://source.unsplash.com/random/400x400?design
-            https://source.unsplash.com/random/400x400?creative
-            https://source.unsplash.com/random/400x400?illustration
-            https://source.unsplash.com/random/400x400?photo
-            <img src="urce.unsplash.com/random/400x400?graphic
+    <!-- Work -->
+    <section id="work" class="section work">
+      <div class="container">
+        <h2>Réalisations récentes</h2>
+        <p class="muted">Sélection de projets — design, performance et résultats mesurables.</p>
+
+        <div class="work-grid">
+          <figure class="work-card">
+            <img alt="Projet A — interface" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><rect width='100%' height='100%' fill='%230f172a'/><text x='50%' y='50%' fill='%23fff' font-family='Inter' font-size='24' text-anchor='middle'>Projet A</text></svg>">
+            <figcaption>
+              <strong>Projet A</strong>
+              <span>Refonte e-commerce — +36% conversion</span>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <img alt="Projet B — dashboard" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><rect width='100%' height='100%' fill='%23063f63'/><text x='50%' y='50%' fill='%23fff' font-family='Inter' font-size='24' text-anchor='middle'>Projet B</text></svg>">
+            <figcaption>
+              <strong>Projet B</strong>
+              <span>Plateforme SaaS — performance & scalabilité</span>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <img alt="Projet C — site vitrine" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><rect width='100%' height='100%' fill='%237c3aed'/><text x='50%' y='50%' fill='%23fff' font-family='Inter' font-size='24' text-anchor='middle'>Projet C</text></svg>">
+            <figcaption>
+              <strong>Projet C</strong>
+              <span>Identité & site vitrine — storytelling</span>
+            </figcaption>
+          </figure>
         </div>
+      </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <h2>Ce que disent nos clients</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"Une équipe créative et professionnelle, nos projets ont pris vie !"</p>
-                <span>- Alice M.</span>
-            </div>
-            <div class="testimonial-card">
-                <p>"Des designs modernes et une communication parfaite."</p>
-                <span>- Julien R.</span>
-            </div>
-            <div class="testimonial-card">
-                <p>"Je recommande vivement, un travail de qualité et rapide."</p>
-                <span>- Sarah L.</span>
-            </div>
+    <!-- Team / testimonial -->
+    <section id="team" class="section team">
+      <div class="container team-inner">
+        <div class="team-left">
+          <h2>Une équipe qui pousse plus loin</h2>
+          <p class="muted">Designers, devs et stratèges — petites équipes, grand impact.</p>
+
+          <blockquote class="testimonial">
+            <p>« Travail fluide, livrables clairs et ROI rapide. Leur approche a transformé notre produit. »</p>
+            <cite>— Claire L., Product Lead</cite>
+          </blockquote>
         </div>
+
+        <ul class="people-grid" aria-hidden="true">
+          <li><img alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'><rect width='100%' height='100%' rx='20' fill='%230f172a'/><text x='50%' y='50%' fill='%23fff' font-family='Inter' font-size='20' text-anchor='middle'>A</text></svg>"><span>Alex — Design</span></li>
+          <li><img alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'><rect width='100%' height='100%' rx='20' fill='%23063f63'/><text x='50%' y='50%' fill='%23fff' font-family='Inter' font-size='20' text-anchor='middle'>M</text></svg>"><span>Marie — Dev</span></li>
+          <li><img alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'><rect width='100%' height='100%' rx='20' fill='%237c3aed'/><text x='50%' y='50%' fill='%23fff' font-family='Inter' font-size='20' text-anchor='middle'>J</text></svg>"><span>Jules — Stratégie</span></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>&copy; 2025 CreativeStudio - Tous droits réservés</p>
-        <div class="social-links">
-            #Instagram</a>
-            #Dribbble</a>
-            #LinkedIn</a>
+    <!-- Contact / CTA -->
+    <section id="contact" class="section contact">
+      <div class="container contact-card">
+        <div>
+          <h2>Prêt·e à lancer quelque chose de fou ?</h2>
+          <p class="muted">Parle-nous de ton projet — réponse en 48h.</p>
         </div>
-    </footer>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-row">
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" placeholder="Ton prénom" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="ton@exemple.com" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Décris ton projet"></textarea>
+          </div>
+
+          <div class="form-row actions">
+            <button class="btn-primary" type="submit">Envoyer</button>
+            <a class="btn-ghost" href="#work">Voir nos cas</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> NomDeMarque — Tous droits réservés</p>
+      <ul class="footer-links">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // small JS for year + mobile nav toggle (progressive enhancement)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+    burger?.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+>>>>>>> marco
 </body>
 </html>
